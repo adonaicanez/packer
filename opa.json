@@ -1,9 +1,9 @@
 {
   "variables": {
-      "ami_id": "ami-04b9e92b5572fa0d1",
+      "ami_id": "ami-0dedf6a6502877301",
       "aws_region": "us-east-1",
-      "ssh_username": "ubuntu",
-      "aws_vpc_id": "vpc-d479c9b3"
+      "ssh_username": "admin",
+      "aws_vpc_id": "vpc-ef91b595"
   },
 
   "builders": [{
@@ -11,10 +11,8 @@
     "region": "{{user `aws_region`}}",
     "source_ami": "{{user `ami_id`}}",
     "instance_type": "t2.medium",
-    "ssh_username": "ubuntu",
+    "ssh_username": "admin",
     "ami_name": "IaaSWeek",
-    "ssh_keypair_name": "seu_keypair",
-    "ssh_private_key_file": "seu_keypair.pem",
     "vpc_id": "{{user `aws_vpc_id`}}"
   }],
  
